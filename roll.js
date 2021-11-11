@@ -8,7 +8,7 @@ function formdata()
             console.log(numRolls, numSides, modifier);
             rollDie(numRolls, numSides, modifier);
         }    
-
+//im having trouble adding the modifier to the result of the dice roll
 function rollDie(numRolls, numSides) {
     //this function is a for loop that will roll a (numSides) die (numRoll) times
     let result = 0
