@@ -9,9 +9,14 @@ function formdata()
             rollDie(numRolls, numSides, modifier);
         }    
 
-
+//this function is a for loop that will roll a (numSides) die (numRoll) times
 function rollDie(numRolls, numSides, modifier) {
-    //this function is a for loop that will roll a (numSides) die (numRoll) times
+    
+    //this if statement will hellp account for missing value for modifier. ex(2d4)
+    if (modifier == undefined){
+        modifier = 0;
+    }
+    ]
     if (numRolls && numSides)
         var result = 0
         
