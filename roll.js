@@ -8,13 +8,19 @@ function formdata()
             console.log(numRolls, numSides, modifier);
             rollDie(numRolls, numSides, modifier);
         }    
-//im having trouble adding the modifier to the result of the dice roll
-function rollDie(numRolls, numSides) {
+
+
+function rollDie(numRolls, numSides, modifier) {
     //this function is a for loop that will roll a (numSides) die (numRoll) times
-    let result = 0
-    for(let step = 0; step < numRolls; step++){
-        result += (1 + Math.floor(Math.random()*numSides))
-    }
-    console.log(result);
-    return result
+    if (numRolls && numSides)
+        var result = 0
+        
+        for(let step = 0; step < numRolls; step++){
+
+            result += (1 + Math.floor(Math.random()*numSides))
+        }
+        //+ + will turn the variable from a string into a number
+        let total = result + + modifier
+    console.log(total);
+    return total
 }
