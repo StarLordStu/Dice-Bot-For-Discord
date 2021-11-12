@@ -31,6 +31,12 @@ function rollDie(numRolls, numSides, modifier) {
 
 function roll(str) {
     let [numRolls, numSides, modifier] = str.split(/[dD+-]{1}/);
+    // splitting the string returns these as strings, so we have to cast them as ints
+    // TODO: this does not do proper error handling for incorrect formats in the input
+    //       string.
+    numRolls = parseInt(numRolls);
+    numSides = parseInt(numSides);
+    modifier = parseInt(modifier);
     let total = 0;
     for (let i = 0; i < numRolls; i++) {
         total += rollSingleDie(numSides);
