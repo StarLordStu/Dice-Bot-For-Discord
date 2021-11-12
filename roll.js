@@ -1,8 +1,6 @@
 //this function takes the text from the input and puts it in a variable
-function formdata() 
+function roll(str) 
         {
-        let rollReq= document.getElementById("request").value;
-
             let [numRolls, numSides, modifier] = rollReq.split(/[dD+-]{1}/);
             //let mod = rollReq.match(/([+-]{1})([0-9]{1,})/);
             console.log(numRolls, numSides, modifier);
